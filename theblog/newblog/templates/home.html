@@ -2,6 +2,17 @@
 {% block title %}{% endblock title %}
 {% block content %}
     <style>
+      .button{
+        text-align: center !important;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center !important;
+        margin-right: 500px;
+
+      }
+      .recent-post{
+        padding-left: 20px;
+      }
       a{
         text-decoration: none;
       }
@@ -304,10 +315,10 @@
         background: #BB5A3A;
         margin-bottom: 31px;
         display: flex;
-        align-self: center;
         padding: 8px 0.5px 8px 0;
         width: 140px;
         box-sizing: border-box;
+        margin: 20px;
       }
       .home .let-me-know-whats-on-your-mind {
         margin: 0 13.4px 43px 0;
@@ -535,11 +546,21 @@
           </div>
         </div>
       </div>
-      <div class="frame-4">
-        <span class="all-posts">
-          <a href="{% url "all_blogs" %}" style="text-decoration: none; color: #FFFFFF">
-        All Posts
-          </a>
-        </span>
+      <div class="button">
+        <div class="frame-4">
+          <span class="all-posts" >
+            <a href="{% url "all_blogs" %}" style="text-decoration: none; color: #FFFFFF">
+          All Posts
+            </a>
+          </span>
+        </div>
+        <div class="frame-4">
+          <span class="recent-posts">
+            <a href="{% url "recent" %}" style="text-decoration: none; color: #FFFFFF; padding-left: 27px;">
+          Recent&nbspPosts
+            </a>
+          </span>
+        </div>
       </div>
+      {% comment %} {% include "recent_post.html" %} {% endcomment %}
 {% endblock content %}

@@ -21,3 +21,8 @@ class ContactView(CreateView):
     form_class = ContactForm
     template_name = "contact.html"
 
+def RecentPostView(request):
+    recent_post = Post.objects.order_by('post_date')[:2]
+    context = {'recent_post': recent_post}
+    return render(request, 'recent_post.html', context)
+
