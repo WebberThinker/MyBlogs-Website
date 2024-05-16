@@ -1,0 +1,371 @@
+{% extends "base.html" %}
+{% block title %}{% endblock title %}
+{% block content %}
+<style>
+  a{
+    text-decoration: none;
+  }
+  .content{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 150px;
+  }
+  .blogs .the-feed {
+    margin-bottom: 20px;
+    text-align: center;
+    overflow-wrap: break-word;
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: capitalize;
+    color: #000000;
+  }
+  .blogs .acf-2-c-39-f-511-b-6478-eaea-5-b-4-f-7713831-c-0-mv-21 {
+    background: url('../assets/images/acf_2_c_39_f_511_b_6478_eaea_5_b_4_f_7713831_c_0_mv_21.png') 50% / cover no-repeat;
+    margin-bottom: 31.5px;
+    width: 360px;
+    height: 333px;
+  }
+  .blogs .march-2220232-min {
+    margin-bottom: 14px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: 'Average Sans';
+    font-weight: 400;
+    font-size: 10px;
+    color: #858585;
+  }
+  .blogs .transform-your-winter-blues-into-winter-creativity {
+    margin-bottom: 14px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 26px;
+    text-transform: capitalize;
+    color: #000000;
+  }
+  .blogs .create-ablog-post-subtitle-that-summarizes-your-post-in-afew-short-punchy-sentences-and-entices-your-audience-to {
+    margin-right: 2.3px;
+    overflow-wrap: break-word;
+    font-family: 'Average Sans';
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: capitalize;
+    color: #585858;
+  }
+  .blogs .frame-7 {
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: fit-content;
+    box-sizing: border-box;
+    width: 287px;
+  }
+  .blogs .post-3 {
+    border: 1px solid #B6B6B6;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-bottom: 28.5px;
+    box-sizing: border-box;
+    margin: 16px;
+  }
+  .blogs .acf-2-c-39-f-511-b-6478-eaea-5-b-4-f-7713831-c-0-mv-214 {
+    background: url('../assets/images/acf_2_c_39_f_511_b_6478_eaea_5_b_4_f_7713831_c_0_mv_21.png') 50% / cover no-repeat;
+    margin-bottom: 31.5px;
+    width: 360px;
+    height: 333px;
+  }
+  .blogs .march-2220232-min-5 {
+    margin-bottom: 14px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: 'Average Sans';
+    font-weight: 400;
+    font-size: 10px;
+    color: #858585;
+  }
+  .blogs .transform-your-winter-blues-into-winter-creativity-5 {
+    margin-bottom: 14px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 26px;
+    text-transform: capitalize;
+    color: #000000;
+  }
+  .blogs .create-ablog-post-subtitle-that-summarizes-your-post-in-afew-short-punchy-sentences-and-entices-your-audience-to-5 {
+    margin-right: 2.3px;
+    overflow-wrap: break-word;
+    font-family: 'Average Sans';
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: capitalize;
+    color: #585858;
+  }
+  .blogs .frame-75 {
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  .blogs .post-4 {
+    border: 1px solid #B6B6B6;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 28.5px;
+    box-sizing: border-box;
+  }
+  .blogs .acf-2-c-39-f-511-b-6478-eaea-5-b-4-f-7713831-c-0-mv-211 {
+    background: url('../assets/images/acf_2_c_39_f_511_b_6478_eaea_5_b_4_f_7713831_c_0_mv_21.png') 50% / cover no-repeat;
+    margin-bottom: 31.5px;
+    width: 360px;
+    height: 333px;
+  }
+  .blogs .march-2220232-min-1 {
+    margin-bottom: 14px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: 'Average Sans';
+    font-weight: 400;
+    font-size: 10px;
+    color: #858585;
+  }
+  .blogs .transform-your-winter-blues-into-winter-creativity-1 {
+    margin-bottom: 14px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 26px;
+    text-transform: capitalize;
+    color: #000000;
+  }
+  .blogs .create-ablog-post-subtitle-that-summarizes-your-post-in-afew-short-punchy-sentences-and-entices-your-audience-to-1 {
+    margin-right: 2.3px;
+    overflow-wrap: break-word;
+    font-family: 'Average Sans';
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: capitalize;
+    color: #585858;
+  }
+  .blogs .frame-71 {
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  .blogs .post-5 {
+    border: 1px solid #B6B6B6;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 28.5px;
+    box-sizing: border-box;
+  }
+  .blogs .container-1 {
+    margin-bottom: 23px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  .blogs .acf-2-c-39-f-511-b-6478-eaea-5-b-4-f-7713831-c-0-mv-212 {
+    background: url('../assets/images/acf_2_c_39_f_511_b_6478_eaea_5_b_4_f_7713831_c_0_mv_21.png') 50% / cover no-repeat;
+    margin-bottom: 31.5px;
+    width: 360px;
+    height: 333px;
+  }
+  .blogs .march-2220232-min-2 {
+    margin-bottom: 14px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: 'Average Sans';
+    font-weight: 400;
+    font-size: 10px;
+    color: #858585;
+  }
+  .blogs .transform-your-winter-blues-into-winter-creativity-2 {
+    margin-bottom: 14px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 26px;
+    text-transform: capitalize;
+    color: #000000;
+  }
+  .blogs .create-ablog-post-subtitle-that-summarizes-your-post-in-afew-short-punchy-sentences-and-entices-your-audience-to-2 {
+    margin-right: 2.3px;
+    overflow-wrap: break-word;
+    font-family: 'Average Sans';
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: capitalize;
+    color: #585858;
+  }
+  .blogs .frame-72 {
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  .blogs .post-6 {
+    border: 1px solid #B6B6B6;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 28.5px;
+    box-sizing: border-box;
+  }
+  .blogs .acf-2-c-39-f-511-b-6478-eaea-5-b-4-f-7713831-c-0-mv-213 {
+    background: url('../assets/images/acf_2_c_39_f_511_b_6478_eaea_5_b_4_f_7713831_c_0_mv_21.png') 50% / cover no-repeat;
+    margin-bottom: 31.5px;
+    width: 360px;
+    height: 333px;
+  }
+  .blogs .march-2220232-min-3 {
+    margin-bottom: 14px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: 'Average Sans';
+    font-weight: 400;
+    font-size: 10px;
+    color: #858585;
+  }
+  .blogs .transform-your-winter-blues-into-winter-creativity-3 {
+    margin-bottom: 14px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 26px;
+    text-transform: capitalize;
+    color: #000000;
+  }
+  .blogs .create-ablog-post-subtitle-that-summarizes-your-post-in-afew-short-punchy-sentences-and-entices-your-audience-to-3 {
+    margin-right: 2.3px;
+    overflow-wrap: break-word;
+    font-family: 'Average Sans';
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: capitalize;
+    color: #585858;
+  }
+  .blogs .frame-73 {
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  .blogs .post-7 {
+    border: 1px solid #B6B6B6;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 28.5px;
+    box-sizing: border-box;
+  }
+  .blogs .acf-2-c-39-f-511-b-6478-eaea-5-b-4-f-7713831-c-0-mv-215 {
+    background: url('../assets/images/acf_2_c_39_f_511_b_6478_eaea_5_b_4_f_7713831_c_0_mv_21.png') 50% / cover no-repeat;
+    margin-bottom: 31.5px;
+    width: 360px;
+    height: 333px;
+  }
+  .blogs .march-2220232-min-4 {
+    margin-bottom: 14px;
+    display: inline-block;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-family: 'Average Sans';
+    font-weight: 400;
+    font-size: 10px;
+    color: #858585;
+  }
+  .blogs .transform-your-winter-blues-into-winter-creativity-4 {
+    margin-bottom: 14px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 26px;
+    text-transform: capitalize;
+    color: #000000;
+  }
+  .blogs .create-ablog-post-subtitle-that-summarizes-your-post-in-afew-short-punchy-sentences-and-entices-your-audience-to-4 {
+    margin-right: 2.3px;
+    overflow-wrap: break-word;
+    font-family: 'Average Sans';
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: capitalize;
+    color: #585858;
+  }
+  .blogs .frame-74 {
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  .blogs .post-8 {
+    border: 1px solid #B6B6B6;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 28.5px;
+    box-sizing: border-box;
+  }
+  .blogs .container {
+    margin-bottom: 254px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  
+  
+</style>
+    <div class="blogs">
+      <div class="the-feed">
+      The Feed
+      </div>
+        <div class="content">
+          {% for post in object_list %}
+          <a href="{% url "detail_page" post.pk %}">
+          <div class="post-3">
+            <div class="acf-2-c-39-f-511-b-6478-eaea-5-b-4-f-7713831-c-0-mv-21">
+            </div>
+            <div class="frame-7">
+              <div class="march-2220232-min">
+              {{post.post_date}}
+              </div>
+              <div class="transform-your-winter-blues-into-winter-creativity">
+              {{post.title}}
+              </div>
+              <span class="create-ablog-post-subtitle-that-summarizes-your-post-in-afew-short-punchy-sentences-and-entices-your-audience-to">
+              {{post.snippet|safe}}
+              </span>
+            </div>
+          </div>
+        </a>
+        {% endfor %}
+        </div>
+      {% include "contact.html" %}
+{% endblock content %}

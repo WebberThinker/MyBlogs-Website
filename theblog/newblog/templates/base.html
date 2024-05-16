@@ -1,0 +1,154 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Average+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@&display=swap" rel="stylesheet">
+    <style>
+     
+      .base .my-blogs {
+        margin-right: 17.5px;
+        width: 757.5px;
+        overflow-wrap: break-word;
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        font-size: 26px;
+        color: #000000 !important; 
+        margin-left: 150px;
+        text-decoration: none;
+      }
+      .base .home-4 {
+        overflow-wrap: break-word;
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #BB5A3A;
+        padding: 20px;
+      }
+      .base .home {
+        display: flex;
+        box-sizing: border-box;
+      }
+      .base .home-5 {
+        overflow-wrap: break-word;
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #000000 !important;
+        padding: 20px;
+      }
+      .base .home-1 {
+        display: flex;
+        box-sizing: border-box;
+      }
+      .base .home-6 {
+        overflow-wrap: break-word;
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #000000;
+        padding: 20px;
+      }
+      .base .home-2 {
+        display: flex;
+        box-sizing: border-box;
+      }
+      .base .home-7 {
+        overflow-wrap: break-word;
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #000000;
+        padding: 20px;
+      }
+      .base .home-3 {
+        display: flex;
+        box-sizing: border-box;
+      }
+      .base .group-10 {
+        margin: 7px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 342px;
+        height: fit-content;
+        box-sizing: border-box;
+      }
+      .base .navbar {
+        background: #FFFFFF;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 0;
+        width: 1440px;
+        height: fit-content;
+        box-sizing: border-box;
+      }
+      .base {
+        background: #FFFFFF;
+        display: flex;
+        width: 1440px;
+        box-sizing: border-box;
+      }
+      
+    </style>
+  </head>
+  <body>
+    
+    <div class="base">
+      <div class="navbar">
+        <span class="my-blogs" >
+          <a href="{% url "home" %}">
+        MyBlogs
+          </a>
+        </span>
+        <div class="group-10">
+          <div class="home">
+            <span class="home-4">
+          <a href="{% url "home" %}">
+            home
+          </a>
+            </span>
+          </div>
+          <div class="home-1">
+            <span class="home-5">
+              <a href='{% url "all_blogs" %}'>
+                MyBlog
+              </a>
+            </span>
+          </div>
+          <div class="home-2">
+            <span class="home-6">
+            About
+            </span>
+          </div>
+          <div class="home-3">
+            <span class="home-7">
+              <a href="{% url "contact" %}">
+            contact
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% block content %}
+    
+    {% endblock content %}
+    {% block contact %}
+    
+    {% endblock contact %}
+  </body>
+</html>

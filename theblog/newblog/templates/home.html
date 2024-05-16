@@ -1,0 +1,545 @@
+{% extends "base.html" %}
+{% block title %}{% endblock title %}
+{% block content %}
+    <style>
+      a{
+        text-decoration: none;
+      }
+      .home .download-1 {
+        background: url('../assets/images/download_1.png') 50% / cover no-repeat;
+        margin: 0 7px 29.5px 0;
+        width: 478px;
+        height: 478px;
+      }
+      .home .download {
+        background: url('../assets/images/download.png') 50% / cover no-repeat;
+        width: 470px;
+        height: 436.7px;
+      }
+      .home .my-life-my-blog {
+        overflow-wrap: break-word;
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        font-size: 30px;
+        text-transform: capitalize;
+        color: #000000;
+      }
+      .home .frame-18 {
+        background: #FFFFFF;
+        display: flex;
+        padding: 11.3px 11.3px 21.5px 110px;
+        width: 470px;
+        box-sizing: border-box;
+      }
+      .home .group-2 {
+        margin-right: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 470px;
+        box-sizing: border-box;
+      }
+      .home .download-2 {
+        background: url('../assets/images/download_2.png') 50% / cover no-repeat;
+        margin-bottom: 27.5px;
+        width: 475px;
+        height: 480px;
+      }
+      .home .container-1 {
+        margin: 0 2px 92.5px 0;
+        display: flex;
+        flex-direction: row;
+        width: 1438px;
+        box-sizing: border-box;
+      }
+      .home .acf-2-c-39-f-511-b-6478-eaea-5-b-4-f-7713831-c-0-mv-21 {
+        background: url('../assets/images/acf_2_c_39_f_511_b_6478_eaea_5_b_4_f_7713831_c_0_mv_21.png') 50% / cover no-repeat;
+        margin-right: 28.1px;
+        width: 281.9px;
+        height: 376.8px;
+      }
+      .home .march-2220232-min-1 {
+        margin-bottom: 14px;
+        display: inline-block;
+        align-self: flex-start;
+        overflow-wrap: break-word;
+        font-family: 'Average Sans';
+        font-weight: 400;
+        font-size: 10px;
+        color: #858585;
+      }
+      .home .transform-your-winter-blues-into-winter-creativity-1 {
+        margin: 0 17.7px 14px 0;
+        display: inline-block;
+        overflow-wrap: break-word;
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        font-size: 26px;
+        text-transform: capitalize;
+        color: #000000;
+      }
+      .home .create-ablog-post-subtitle-that-summarizes-your-post-in-afew-short-punchy-sentences-and-entices-your-audience-to-1 {
+        overflow-wrap: break-word;
+        font-family: 'Average Sans';
+        font-weight: 400;
+        font-size: 15px;
+        text-transform: capitalize;
+        color: #585858;
+      }
+      .home .component-11 {
+        margin: 33px 0 119.8px 0;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        width: 239px;
+      }
+      .home .post-1 {
+        border: 1px solid #B6B6B6;
+        margin-bottom: 45.2px;
+        display: flex;
+        flex-direction: row;
+        padding-right: 30.2px;
+        width: fit-content;
+        box-sizing: border-box;
+      }
+      .home .acf-2-c-39-f-511-b-6478-eaea-5-b-4-f-7713831-c-0-mv-211 {
+        background: url('../assets/images/acf_2_c_39_f_511_b_6478_eaea_5_b_4_f_7713831_c_0_mv_21.png') 50% / cover no-repeat;
+        margin-right: 28.1px;
+        width: 281.9px;
+        height: 376.8px;
+      }
+      .home .march-2220232-min {
+        margin-bottom: 14px;
+        display: inline-block;
+        align-self: flex-start;
+        overflow-wrap: break-word;
+        font-family: 'Average Sans';
+        font-weight: 400;
+        font-size: 10px;
+        color: #858585;
+      }
+      .home .transform-your-winter-blues-into-winter-creativity {
+        margin: 0 17.7px 14px 0;
+        display: inline-block;
+        overflow-wrap: break-word;
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        font-size: 26px;
+        text-transform: capitalize;
+        color: #000000;
+      }
+      .home .create-ablog-post-subtitle-that-summarizes-your-post-in-afew-short-punchy-sentences-and-entices-your-audience-to {
+        overflow-wrap: break-word;
+        font-family: 'Average Sans';
+        font-weight: 400;
+        font-size: 15px;
+        text-transform: capitalize;
+        color: #585858;
+      }
+      .home .component-1 {
+        margin: 33px 0 119.8px 0;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        width: 239px;
+      }
+      .home .post-3 {
+        border: 1px solid #B6B6B6;
+        display: flex;
+        flex-direction: row;
+        padding-right: 30.2px;
+        width: fit-content;
+        box-sizing: border-box;
+      }
+      .home .container-2 {
+        margin-right: 98px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+      }
+      .home .let-the-posts-come-to-you {
+        margin: 0 47px 35px 0;
+        display: inline-block;
+        overflow-wrap: break-word;
+        font-family: 'Playfair Display';
+        font-weight: 800;
+        font-size: 32.9px;
+        text-transform: capitalize;
+        color: #FFFFFF;
+        width: 254px;
+        padding-left: 30px;
+      }
+      .home .email {
+        margin-bottom: 22px;
+        display: inline-block;
+        align-self: flex-start;
+        overflow-wrap: break-word;
+        font-family: 'Average Sans';
+        font-weight: 400;
+        font-size: 15px;
+        text-transform: capitalize;
+        color: #FFFFFF;
+      }
+      .home .line-1 {
+        background: #FFFFFF;
+        width: 254.2px;
+        height: 1px;
+      }
+      .home .group-3 {
+        margin-bottom: 34px;
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        box-sizing: border-box;
+      }
+      .home .subscribe {
+        overflow-wrap: break-word;
+        font-family: 'Average Sans';
+        font-weight: 400;
+        font-size: 15px;
+        text-transform: capitalize;
+        color: #BB5A3A;
+        padding: 0 37px;
+      }
+      .home .frame-3 {
+        background: #FFFFFF;
+        margin-left: 0.8px;
+        display: flex;
+        padding: 8px 0.2px 8px 0;
+        width: 139px;
+        box-sizing: border-box;
+      }
+      .home .frame-2 {
+        background: #BB5A3A;
+        margin-bottom: 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 78px 0;
+        width: 384.2px;
+        box-sizing: border-box;
+      }
+      .home .vector {
+        width: 10.5px;
+        height: 20px;
+      }
+      .home .rifacebook-fill {
+        margin-top: 1px;
+        display: flex;
+        width: 10.5px;
+        height: 20px;
+        box-sizing: border-box;
+      }
+      .home .vector-1 {
+        width: 20px;
+        height: 20px;
+      }
+      .home .riinstagram-line {
+        margin-bottom: 1px;
+        display: flex;
+        width: 20px;
+        height: 20px;
+        box-sizing: border-box;
+      }
+      .home .vector-2 {
+        width: 20.9px;
+        height: 17px;
+      }
+      .home .mditwitter {
+        margin-top: 4px;
+        display: flex;
+        width: 20.9px;
+        height: 17px;
+        box-sizing: border-box;
+      }
+      .home .vector-3 {
+        width: 20px;
+        height: 20px;
+      }
+      .home .ripinterest-line {
+        margin-bottom: 1px;
+        display: flex;
+        width: 20px;
+        height: 20px;
+        box-sizing: border-box;
+      }
+      .home .group-11 {
+        margin-left: 4.8px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 177px;
+        box-sizing: border-box;
+      }
+      .home .frame-1 {
+        background: #FCDED9;
+        margin-bottom: 252.8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 64px 0 36px 0;
+        width: 520px;
+        height: fit-content;
+        box-sizing: border-box;
+      }
+      .home .container {
+        margin: 0 92px 41.2px 92px;
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+        box-sizing: border-box;
+      }
+      .home .all-posts {
+        overflow-wrap: break-word;
+        font-family: 'Average Sans';
+        font-weight: 400;
+        font-size: 15px;
+        text-transform: capitalize;
+        color: #FFFFFF;
+        padding: 0 40px;
+      
+      }
+      .home .frame-4 {
+        background: #BB5A3A;
+        margin-bottom: 31px;
+        display: flex;
+        align-self: center;
+        padding: 8px 0.5px 8px 0;
+        width: 140px;
+        box-sizing: border-box;
+      }
+      .home .let-me-know-whats-on-your-mind {
+        margin: 0 13.4px 43px 0;
+        display: inline-block;
+        overflow-wrap: break-word;
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        font-size: 40px;
+        text-transform: capitalize;
+        color: #000000;
+      }
+      .home .first-name {
+        margin-bottom: 30px;
+        display: inline-block;
+        align-self: flex-start;
+        overflow-wrap: break-word;
+        font-family: 'Average Sans';
+        font-weight: 400;
+        font-size: 15px;
+        text-transform: capitalize;
+        color: rgba(0, 0, 0, 0.35);
+      }
+      .home .line-11 {
+        background: #000000;
+        width: 288px;
+        height: 1px;
+      }
+      .home .group-5 {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+      }
+      .home .last-name {
+        margin-bottom: 30px;
+        display: inline-block;
+        align-self: flex-start;
+        overflow-wrap: break-word;
+        font-family: 'Average Sans';
+        font-weight: 400;
+        font-size: 15px;
+        text-transform: capitalize;
+        color: rgba(0, 0, 0, 0.35);
+      }
+      .home .line-12 {
+        background: #000000;
+        width: 288px;
+        height: 1px;
+      }
+      .home .group-4 {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+      }
+      .home .frame-12 {
+        margin-bottom: 74px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 651px;
+        box-sizing: border-box;
+      }
+      .home .email-1 {
+        margin-bottom: 30px;
+        display: inline-block;
+        align-self: flex-start;
+        overflow-wrap: break-word;
+        font-family: 'Average Sans';
+        font-weight: 400;
+        font-size: 15px;
+        text-transform: capitalize;
+        color: rgba(0, 0, 0, 0.35);
+      }
+      .home .line-13 {
+        background: #000000;
+        width: 288px;
+        height: 1px;
+      }
+      .home .group-7 {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+      }
+      .home .leave-amessage {
+        margin-bottom: 30px;
+        display: inline-block;
+        align-self: flex-start;
+        overflow-wrap: break-word;
+        font-family: 'Average Sans';
+        font-weight: 400;
+        font-size: 15px;
+        text-transform: capitalize;
+        color: rgba(0, 0, 0, 0.35);
+      }
+      .home .line-14 {
+        background: #000000;
+        width: 288px;
+        height: 1px;
+      }
+      .home .group-6 {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+      }
+      .home .frame-11 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 651px;
+        box-sizing: border-box;
+      }
+      .home .frame-10 {
+        margin-bottom: 42px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 651px;
+        box-sizing: border-box;
+      }
+      .home .submit {
+        overflow-wrap: break-word;
+        font-family: 'Average Sans';
+        font-weight: 400;
+        font-size: 15px;
+        text-transform: capitalize;
+        color: #FFFFFF;
+      }
+      .home .frame-5 {
+        background: #BB5A3A;
+        margin-right: 531px;
+        display: flex;
+        padding: 8px 1.6px 8px 0;
+        width: 120px;
+        box-sizing: border-box;
+        padding: 9px 37px;
+      }
+      .home .frame-6 {
+        background: rgba(252, 222, 217, 0.6);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 48px 0 56px 0;
+        width: 1440px;
+        box-sizing: border-box;
+      }
+      .home {
+        background: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 1440px;
+        box-sizing: border-box;
+      }
+      
+    </style>
+
+    <div class="home">
+      <div class="container-1">
+        <div class="download-1">
+        </div>
+        <div class="group-2">
+          <div class="download">
+          </div>
+          <div class="frame-18">
+            <span class="my-life-my-blog">
+            my life. my blog
+            </span>
+          </div>
+        </div>
+        <div class="download-2">
+        </div>
+      </div>
+      <div class="container">
+        <div class="container-2">
+          {% for post in object_list %}
+            <a href="{% url "detail_page" post.pk %}">
+              <div class="post-1">
+                <div class="acf-2-c-39-f-511-b-6478-eaea-5-b-4-f-7713831-c-0-mv-21">
+                </div>
+                <div class="component-11">
+                  <div class="march-2220232-min-1">
+                  {{post.post_date}}
+                  </div>
+                  <div class="transform-your-winter-blues-into-winter-creativity-1">
+                  {{post.title}}
+                  </div>
+                  <span class="create-ablog-post-subtitle-that-summarizes-your-post-in-afew-short-punchy-sentences-and-entices-your-audience-to-1">
+                  {{post.snippet}}
+                  </span>
+                </div>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+        <div class="frame-1">
+          <div class="frame-2">
+            <div class="let-the-posts-come-to-you">
+            Let the posts come to you.
+            </div>
+            <div class="group-3">
+              <div class="email">
+              email
+              </div>
+              <div class="line-1">
+              </div>
+            </div>
+            <div class="frame-3">
+              <span class="subscribe">
+              subscribe
+              </span>
+            </div>
+          </div>
+          <div class="group-11">
+            <div class="rifacebook-fill">
+              <img class="vector" src="../assets/vectors/vector_x2.svg" />
+            </div>
+            <div class="riinstagram-line">
+              <img class="vector-1" src="../assets/vectors/vector_5_x2.svg" />
+            </div>
+            <div class="mditwitter">
+              <img class="vector-2" src="../assets/vectors/vector_7_x2.svg" />
+            </div>
+            <div class="ripinterest-line">
+              <img class="vector-3" src="../assets/vectors/vector_3_x2.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="frame-4">
+        <span class="all-posts">
+          <a href="{% url "all_blogs" %}" style="text-decoration: none; color: #FFFFFF">
+        All Posts
+          </a>
+        </span>
+      </div>
+{% endblock content %}

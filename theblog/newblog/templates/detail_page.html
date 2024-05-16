@@ -1,0 +1,365 @@
+{% extends "base.html" %}
+{% block title %}{{post.title}}{% endblock title %}
+{% block content %}
+    <style>
+      .back{
+        border: 1px solid #BB5A3A;
+        background: #BB5A3A;
+        color: #FFFFFF;
+        padding: 16px 35px;
+        border-radius: 30px;
+        margin-left: 160px;
+      }
+      .detail-page .the-title {
+        width: 1200px; 
+        margin-left: 70px;
+        margin-bottom: 20px;
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        font-size: 40px;
+        text-transform: capitalize;
+        color: #000000;
+        display: flex;
+        text-align: left;
+      }
+      .detail-page .line-2 {
+        background: #858585;
+        margin-bottom: 27.5px;
+        width: 1120px;
+        height: 1.5px;
+      }
+      .detail-page .march-2220232-min {
+        margin: 0 791.9px 38px -210px;
+        display: inline-block;
+        overflow-wrap: break-word;
+        font-family: 'Average Sans';
+        font-weight: 400;
+        font-size: 22px;
+        color: #858585;
+      }
+      .detail-page .acf-2-c-39-f-511-b-6478-eaea-5-b-4-f-7713831-c-0-mv-21 {
+        background: url('../assets/images/acf_2_c_39_f_511_b_6478_eaea_5_b_4_f_7713831_c_0_mv_21.png') 50% / cover no-repeat;
+        width: 1120px;
+        height: 465px;
+      }
+      .detail-page .frame-14 {
+        margin: 0 2px 45px 0;
+        display: flex;
+        height: 465px;
+        box-sizing: border-box;
+        width:850px;
+        height: 455px;
+        margin-left: -270px;
+      }
+      .detail-page .create-ablog-post-subtitle-that-summarizes-your-post-in-afew-short-punchy-sentences-and-entices-your-audience-to-sed-ut-perspiciatis-unde-omnis-iste-natus-error-sit-voluptatem-accusantium-doloremque-laudantium-totam-rem-aperiam-eaque-ipsa-quae-ab-illo-inventore-veritatis-et-quasi-architecto-beatae-vitae-dicta-sunt-explicabo-nemo-enim-ipsam-voluptatem-quia-voluptas-sit-aspernatur-aut-odit-aut-fugit-sed-quia-consequuntur-magni-dolores-eos-qui-ratione-voluptatem-sequi-nesciunt-neque-porro-quisquam-est-qui-dolorem-ipsum-quia-dolor-sit-amet-consectetur-adipisci-velit-sed-quia-non-numquam-eius-modi-tempora-incidunt-ut-labore-et-dolore-magnam-aliquam-quaerat-voluptatem-ut-enim-ad-minima-veniam-quis-nostrum-exercitationem-ullam-corporis-suscipit-laboriosam-nisi-ut-aliquid-ex-ea-commodi-consequatur-quis-autem-vel-eum-iure-reprehenderit-qui-in-ea-voluptate-velit-esse-quam-nihil-molestiae-consequatur-vel-illum-qui-dolorem-eum-fugiat-quo-voluptas-nulla-pariatur-create-ablog-post-subtitle-that-summarizes-your-post-in-afew-short-punchy-sentences-and-entices-your-audience-to-sed-ut-perspiciatis-unde-omnis-iste-natus-error-sit-voluptatem-accusantium-doloremque-laudantium-totam-rem-aperiam-eaque-ipsa-quae-ab-illo-inventore-veritatis-et-quasi-architecto-beatae-vitae-dicta-sunt-explicabo-nemo-enim-ipsam-voluptatem-quia-voluptas-sit-aspernatur-aut-odit-aut-fugit-sed-quia-consequuntur-magni-dolores-eos-qui-ratione-voluptatem-sequi-nesciunt-neque-porro-quisquam-est-qui-dolorem-ipsum-quia-dolor-sit-amet-consectetur-adipisci-velit-sed-quia-non-numquam-eius-modi-tempora-incidunt-ut-labore-et-dolore-magnam-aliquam-quaerat-voluptatem-ut-enim-ad-minima-veniam-quis-nostrum-exercitationem-ullam-corporis-suscipit-laboriosam-nisi-ut-aliquid-ex-ea-commodi-consequatur-quis-autem-vel-eum-iure-reprehenderit-qui-in-ea-voluptate-velit-esse-quam-nihil-molestiae-consequatur-vel-illum-qui-dolorem-eum-fugiat-quo-voluptas-nulla-pariatur {
+        margin: 0 12.8px 64px 8px;
+        display: inline-block;
+        overflow-wrap: break-word;
+        font-family: 'Average Sans';
+        font-weight: 400;
+        font-size: 24px;
+        color: #585858;
+        width : 1121px;
+      }
+      .detail-page .edit-1 {
+        overflow-wrap: break-word;
+        font-family: 'Average Sans';
+        font-weight: 400;
+        font-size: 24px;
+        text-transform: capitalize;
+        color: #BB5A3A;
+        padding: 0 45px;
+      }
+      .detail-page .frame-16 {
+        border-radius: 40px;
+        border: 2.5px solid #BB5A3A;
+        background: #FFFFFF;
+        margin-right: 16px;
+        display: flex;
+        padding: 8.5px 0.4px 8.5px 0;
+        width: 144px;
+        box-sizing: border-box;
+      }
+      .detail-page .edit {
+        overflow-wrap: break-word;
+        font-family: 'Average Sans';
+        font-weight: 400;
+        font-size: 24px;
+        text-transform: capitalize;
+        color: #BB5A3A;
+        padding: 0 50px;
+      
+      }
+      .detail-page .frame-17 {
+        border-radius: 40px;
+        border: 2.5px solid #BB5A3A;
+        background: #FFFFFF;
+        display: flex;
+        padding: 8.5px 0.9px 8.5px 0;
+        width: 169px;
+        box-sizing: border-box;
+      }
+      .detail-page .container {
+        margin: 0 793px 40px 0;
+        display: flex;
+        flex-direction: row;
+        width: 329px;
+        box-sizing: border-box;
+      }
+      .detail-page .line-3 {
+        background: #858585;
+        margin-bottom: 30.6px;
+        width: 1120px;
+        height: 1.5px;
+      }
+      .detail-page .vector {
+        width: 16.2px;
+        height: 30.8px;
+      }
+      .detail-page .rifacebook-fill {
+        margin-top: 1.5px;
+        display: flex;
+        width: 16.2px;
+        height: 30.8px;
+        box-sizing: border-box;
+      }
+      .detail-page .vector-1 {
+        width: 30.8px;
+        height: 30.8px;
+      }
+      .detail-page .riinstagram-line {
+        margin-bottom: 1.5px;
+        display: flex;
+        width: 30.8px;
+        height: 30.8px;
+        box-sizing: border-box;
+      }
+      .detail-page .vector-2 {
+        width: 32.2px;
+        height: 26.2px;
+      }
+      .detail-page .mditwitter {
+        margin: 6.2px 0 0px 0;
+        display: flex;
+        width: 32.2px;
+        height: 26.2px;
+        box-sizing: border-box;
+      }
+      .detail-page .vector-3 {
+        width: 30.8px;
+        height: 30.8px;
+      }
+      .detail-page .ripinterest-line {
+        margin-bottom: 1.5px;
+        display: flex;
+        width: 30.8px;
+        height: 30.8px;
+        box-sizing: border-box;
+      }
+      .detail-page .group-11 {
+        margin: 0 826.2px 91.6px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 272.3px;
+        box-sizing: border-box;
+      }
+      .detail-page .recent-posts {
+        margin: 0 909.5px 157px 0;
+        display: inline-block;
+        overflow-wrap: break-word;
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        font-size: 36px;
+        text-transform: capitalize;
+        color: #000000;
+      }
+      .detail-page .let-me-know-whats-on-your-mind {
+        margin: 0 13.4px 43px 0;
+        display: inline-block;
+        overflow-wrap: break-word;
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        font-size: 40px;
+        text-transform: capitalize;
+        color: #000000;
+      }
+      .detail-page .first-name {
+        margin-bottom: 30px;
+        display: inline-block;
+        align-self: flex-start;
+        overflow-wrap: break-word;
+        font-family: 'Average Sans';
+        font-weight: 400;
+        font-size: 15px;
+        text-transform: capitalize;
+        color: rgba(0, 0, 0, 0.35);
+      }
+      .detail-page .line-1 {
+        background: #000000;
+        width: 288px;
+        height: 1px;
+      }
+      .detail-page .group-5 {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+      }
+      .detail-page .last-name {
+        margin-bottom: 30px;
+        display: inline-block;
+        align-self: flex-start;
+        overflow-wrap: break-word;
+        font-family: 'Average Sans';
+        font-weight: 400;
+        font-size: 15px;
+        text-transform: capitalize;
+        color: rgba(0, 0, 0, 0.35);
+      }
+      .detail-page .line-11 {
+        background: #000000;
+        width: 288px;
+        height: 1px;
+      }
+      .detail-page .group-4 {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+      }
+      .detail-page .frame-12 {
+        margin-bottom: 74px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 651px;
+        box-sizing: border-box;
+      }
+      .detail-page .email {
+        margin-bottom: 30px;
+        display: inline-block;
+        align-self: flex-start;
+        overflow-wrap: break-word;
+        font-family: 'Average Sans';
+        font-weight: 400;
+        font-size: 15px;
+        text-transform: capitalize;
+        color: rgba(0, 0, 0, 0.35);
+      }
+      .detail-page .line-12 {
+        background: #000000;
+        width: 288px;
+        height: 1px;
+      }
+      .detail-page .group-7 {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+      }
+      .detail-page .leave-amessage {
+        margin-bottom: 30px;
+        display: inline-block;
+        align-self: flex-start;
+        overflow-wrap: break-word;
+        font-family: 'Average Sans';
+        font-weight: 400;
+        font-size: 15px;
+        text-transform: capitalize;
+        color: rgba(0, 0, 0, 0.35);
+      }
+      .detail-page .line-13 {
+        background: #000000;
+        width: 288px;
+        height: 1px;
+      }
+      .detail-page .group-6 {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+      }
+      .detail-page .frame-11 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 651px;
+        box-sizing: border-box;
+      }
+      .detail-page .frame-10 {
+        margin-bottom: 42px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 651px;
+        box-sizing: border-box;
+      }
+      .detail-page .submit {
+        overflow-wrap: break-word;
+        font-family: 'Average Sans';
+        font-weight: 400;
+        font-size: 15px;
+        text-transform: capitalize;
+        color: #FFFFFF;
+        padding: 0 35px;
+      
+      }
+      .detail-page .frame-5 {
+        background: #BB5A3A;
+        margin-right: 531px;
+        display: flex;
+        padding: 8px 1.6px 8px 0;
+        width: 120px;
+        box-sizing: border-box;
+      }
+      .detail-page .frame-6 {
+        background: rgba(252, 222, 217, 0.6);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 48px 0 56px 0;
+        width: 1440px;
+        box-sizing: border-box;
+      }
+      .detail-page {
+        background: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 56px;
+        width: 1440px;
+        box-sizing: border-box;
+      }
+      
+    </style>
+    <a href="{{request.META.HTTP_REFERER}}" class="back">Back</a>
+    <div class="detail-page">
+      <div class="the-title">
+        {{post.title}}
+      </div>
+      <div class="line-2">
+      </div>
+      <div class="march-2220232-min">
+        {{post.post_date}}
+      </div>
+      <div class="create-ablog-post-subtitle-that-summarizes-your-post-in-afew-short-punchy-sentences-and-entices-your-audience-to-sed-ut-perspiciatis-unde-omnis-iste-natus-error-sit-voluptatem-accusantium-doloremque-laudantium-totam-rem-aperiam-eaque-ipsa-quae-ab-illo-inventore-veritatis-et-quasi-architecto-beatae-vitae-dicta-sunt-explicabo-nemo-enim-ipsam-voluptatem-quia-voluptas-sit-aspernatur-aut-odit-aut-fugit-sed-quia-consequuntur-magni-dolores-eos-qui-ratione-voluptatem-sequi-nesciunt-neque-porro-quisquam-est-qui-dolorem-ipsum-quia-dolor-sit-amet-consectetur-adipisci-velit-sed-quia-non-numquam-eius-modi-tempora-incidunt-ut-labore-et-dolore-magnam-aliquam-quaerat-voluptatem-ut-enim-ad-minima-veniam-quis-nostrum-exercitationem-ullam-corporis-suscipit-laboriosam-nisi-ut-aliquid-ex-ea-commodi-consequatur-quis-autem-vel-eum-iure-reprehenderit-qui-in-ea-voluptate-velit-esse-quam-nihil-molestiae-consequatur-vel-illum-qui-dolorem-eum-fugiat-quo-voluptas-nulla-pariatur-create-ablog-post-subtitle-that-summarizes-your-post-in-afew-short-punchy-sentences-and-entices-your-audience-to-sed-ut-perspiciatis-unde-omnis-iste-natus-error-sit-voluptatem-accusantium-doloremque-laudantium-totam-rem-aperiam-eaque-ipsa-quae-ab-illo-inventore-veritatis-et-quasi-architecto-beatae-vitae-dicta-sunt-explicabo-nemo-enim-ipsam-voluptatem-quia-voluptas-sit-aspernatur-aut-odit-aut-fugit-sed-quia-consequuntur-magni-dolores-eos-qui-ratione-voluptatem-sequi-nesciunt-neque-porro-quisquam-est-qui-dolorem-ipsum-quia-dolor-sit-amet-consectetur-adipisci-velit-sed-quia-non-numquam-eius-modi-tempora-incidunt-ut-labore-et-dolore-magnam-aliquam-quaerat-voluptatem-ut-enim-ad-minima-veniam-quis-nostrum-exercitationem-ullam-corporis-suscipit-laboriosam-nisi-ut-aliquid-ex-ea-commodi-consequatur-quis-autem-vel-eum-iure-reprehenderit-qui-in-ea-voluptate-velit-esse-quam-nihil-molestiae-consequatur-vel-illum-qui-dolorem-eum-fugiat-quo-voluptas-nulla-pariatur">
+        {{post.body|safe}}
+      </div>
+      <div class="line-3">
+      </div>
+      <div class="group-11">
+        <div class="rifacebook-fill">
+          <img class="vector" src="images/vector_6_x2.svg" />
+        </div>
+        <div class="riinstagram-line">
+          <img class="vector-1" src="../assets/vectors/vector_2_x2.svg" />
+        </div>
+        <div class="mditwitter">
+          <img class="vector-2" src="../assets/vectors/vector_1_x2.svg" />
+        </div>
+        <div class="ripinterest-line">
+          <img class="vector-3" src="../assets/vectors/vector_4_x2.svg" />
+        </div>
+      </div>
+      <div class="recent-posts">
+      Recent Posts
+      </div>
+      {% include "contact.html" %}
+{% endblock content %}
