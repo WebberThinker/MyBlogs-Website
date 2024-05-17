@@ -13,7 +13,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@&display=swap" rel="stylesheet">
     <style>
-     
+      .base .home .home-4 a:hover, .base .home-1 .home-5 a:hover, .base .home-2 .home-6 a:hover, .base .home-3 .home-7 a{
+        color: #BB5A3A;
+      }
+      a{
+        text-decoration: none;
+      }
+      .base .my-blogs a{
+        color: #BB5A3A;
+      }
       .base .my-blogs {
         margin-right: 17.5px;
         width: 757.5px;
@@ -21,8 +29,9 @@
         font-family: 'Playfair Display';
         font-weight: 700;
         font-size: 26px;
-        color: #000000 !important; 
+        color: #BB5A3A !important; 
         margin-left: 150px;
+        margin-top: 20px;
         text-decoration: none;
       }
       .base .home-4 {
@@ -131,13 +140,15 @@
           </div>
           <div class="home-2">
             <span class="home-6">
-            About
+              <a href="{% url "about" %}">
+                About
+              </a>
             </span>
           </div>
           <div class="home-3">
             <span class="home-7">
               <a href="{% url "contact" %}">
-            contact
+                 Contact
               </a>
             </span>
           </div>
@@ -147,8 +158,6 @@
     {% block content %}
     
     {% endblock content %}
-    {% block contact %}
-    
-    {% endblock contact %}
+
   </body>
 </html>

@@ -2,6 +2,21 @@
 {% block title %}{% endblock title %}
 {% block content %}
 <style>
+  .base .home .home-4 a{
+    color: #000;
+  }
+  .base .home-1 .home-5 a{
+    color: #BB5A3A;
+  }
+  .base .home-2 .home-6 a{
+    color: #000;
+  }
+  .base .home-3 .home-7 a{
+    color: #000;
+  }
+  .base .home .home-4 a:hover, .base .home-1 .home-5 a:hover, .base .home-2 .home-6 a:hover, .base .home-3 .home-7 a:hover{
+    color: #BB5A3A;
+  }
   a{
     text-decoration: none;
   }
@@ -20,8 +35,8 @@
     text-transform: capitalize;
     color: #000000;
   }
-  .blogs .acf-2-c-39-f-511-b-6478-eaea-5-b-4-f-7713831-c-0-mv-21 {
-    background: url('../assets/images/acf_2_c_39_f_511_b_6478_eaea_5_b_4_f_7713831_c_0_mv_21.png') 50% / cover no-repeat;
+  .blogs .acf-2-c-39-f-511-b-6478-eaea-5-b-4-f-7713831-c-0-mv-21 img {
+    {% comment %} background: url('static/images/acf_2_c_39_f_511_b_6478_eaea_5_b_4_f_7713831_c_0_mv_21.png') 50% / cover no-repeat; {% endcomment %}
     margin-bottom: 31.5px;
     width: 360px;
     height: 333px;
@@ -63,6 +78,7 @@
     width: fit-content;
     box-sizing: border-box;
     width: 287px;
+    height:250px;
   }
   .blogs .post-3 {
     border: 1px solid #B6B6B6;
@@ -351,6 +367,7 @@
           <a href="{% url "detail_page" post.pk %}">
           <div class="post-3">
             <div class="acf-2-c-39-f-511-b-6478-eaea-5-b-4-f-7713831-c-0-mv-21">
+              <img src="{{post.image}}">
             </div>
             <div class="frame-7">
               <div class="march-2220232-min">
@@ -367,5 +384,4 @@
         </a>
         {% endfor %}
         </div>
-      {% include "contact.html" %}
 {% endblock content %}

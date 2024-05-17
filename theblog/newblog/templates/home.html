@@ -1,7 +1,23 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}{% endblock title %}
 {% block content %}
     <style>
+      .base .home .home-4 a:hover, .base .home-1 .home-5 a:hover, .base .home-2 .home-6 a:hover, .base .home-3 .home-7 a:hover{
+        color: #BB5A3A;
+      }
+      .base .home .home-4 a{
+        color: #BB5A3A;
+      }
+      .base .home-1 .home-5 a{
+        color: #000;
+      }
+      .base .home-2 .home-6 a{
+        color: #000;
+      }
+      .base .home-3 .home-7 a{
+        color: #000;
+      }
       .button{
         text-align: center !important;
         display: flex;
@@ -17,13 +33,13 @@
         text-decoration: none;
       }
       .home .download-1 {
-        background: url('../assets/images/download_1.png') 50% / cover no-repeat;
+        background: url('static/images/download_1.png') 50% / cover no-repeat;
         margin: 0 7px 29.5px 0;
         width: 478px;
         height: 478px;
       }
       .home .download {
-        background: url('../assets/images/download.png') 50% / cover no-repeat;
+        background: url('static/images/download.png') 50% / cover no-repeat;
         width: 470px;
         height: 436.7px;
       }
@@ -51,7 +67,7 @@
         box-sizing: border-box;
       }
       .home .download-2 {
-        background: url('../assets/images/download_2.png') 50% / cover no-repeat;
+        background: url('static/images/download_2.png') 50% / cover no-repeat;
         margin-bottom: 27.5px;
         width: 475px;
         height: 480px;
@@ -63,8 +79,7 @@
         width: 1438px;
         box-sizing: border-box;
       }
-      .home .acf-2-c-39-f-511-b-6478-eaea-5-b-4-f-7713831-c-0-mv-21 {
-        background: url('../assets/images/acf_2_c_39_f_511_b_6478_eaea_5_b_4_f_7713831_c_0_mv_21.png') 50% / cover no-repeat;
+      .home .acf-2-c-39-f-511-b-6478-eaea-5-b-4-f-7713831-c-0-mv-21 img{
         margin-right: 28.1px;
         width: 281.9px;
         height: 376.8px;
@@ -112,6 +127,8 @@
         padding-right: 30.2px;
         width: fit-content;
         box-sizing: border-box;
+        height: 350px;
+        overflow: hidden;
       }
       .home .acf-2-c-39-f-511-b-6478-eaea-5-b-4-f-7713831-c-0-mv-211 {
         background: url('../assets/images/acf_2_c_39_f_511_b_6478_eaea_5_b_4_f_7713831_c_0_mv_21.png') 50% / cover no-repeat;
@@ -168,6 +185,7 @@
         flex-direction: column;
         align-items: center;
         box-sizing: border-box;
+        height: fit-content;
       }
       .home .let-the-posts-come-to-you {
         margin: 0 47px 35px 0;
@@ -492,10 +510,11 @@
       </div>
       <div class="container">
         <div class="container-2">
-          {% for post in object_list %}
+          {% for post in recent_posts %}
             <a href="{% url "detail_page" post.pk %}">
               <div class="post-1">
                 <div class="acf-2-c-39-f-511-b-6478-eaea-5-b-4-f-7713831-c-0-mv-21">
+                  <img src="{{post.image}}">
                 </div>
                 <div class="component-11">
                   <div class="march-2220232-min-1">
@@ -532,35 +551,30 @@
           </div>
           <div class="group-11">
             <div class="rifacebook-fill">
-              <img class="vector" src="../assets/vectors/vector_x2.svg" />
+              <img class="vector" src="static/vectors/vector_x2.svg" />
             </div>
             <div class="riinstagram-line">
-              <img class="vector-1" src="../assets/vectors/vector_5_x2.svg" />
+              <img class="vector-1" src="static/vectors/vector_5_x2.svg" />
             </div>
             <div class="mditwitter">
-              <img class="vector-2" src="../assets/vectors/vector_7_x2.svg" />
+              <img class="vector-2" src="static/vectors/vector_7_x2.svg" />
             </div>
             <div class="ripinterest-line">
-              <img class="vector-3" src="../assets/vectors/vector_3_x2.svg" />
+              <img class="vector-3" src="static/vectors/vector_3_x2.svg" />
             </div>
           </div>
         </div>
       </div>
       <div class="button">
-        <div class="frame-4">
-          <span class="all-posts" >
-            <a href="{% url "all_blogs" %}" style="text-decoration: none; color: #FFFFFF">
-          All Posts
-            </a>
-          </span>
-        </div>
-        <div class="frame-4">
-          <span class="recent-posts">
-            <a href="{% url "recent" %}" style="text-decoration: none; color: #FFFFFF; padding-left: 27px;">
-          Recent&nbspPosts
-            </a>
-          </span>
-        </div>
+        <a href="{% url "all_blogs" %}" style="text-decoration: none; color: #FFFFFF">
+          <div class="frame-4">
+            <span class="all-posts" >
+            All Posts
+            </span>
+          </div>
+        </a>
+        
+        
       </div>
       {% comment %} {% include "recent_post.html" %} {% endcomment %}
 {% endblock content %}

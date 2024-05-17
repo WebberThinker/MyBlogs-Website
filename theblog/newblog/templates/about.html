@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+{% block title %}{% endblock title %}
+{% block content %}
+<style>
+    .base .home .home-4 a:hover, .base .home-1 .home-5 a:hover, .base .home-2 .home-6 a:hover, .base .home-3 .home-7 a:hover{
+      color: #BB5A3A;
+    }
+    .base .home .home-4 a{
+      color: #000;
+    }
+    .base .home-1 .home-5 a{
+      color: #000;
+    }
+    .base .home-2 .home-6 a{
+      color: #BB5A3A;
+    }
+    .base .home-3 .home-7 a{
+      color: #000;
+    }
+    .about .im-aparagraph-click-here-to-add-your-own-text-and-edit-me-its-easy-just-click-edit-text-or-double-click-me-to-add-your-own-content-and-make-changes-to-the-font-feel-free-to-drag-and-drop-me-anywhere-you-like-on-your-page-im-agreat-place-for-you-to-tell-astory-and-let-your-users-know-alittle-more-about-you-this-is-agreat-space-to-write-along-text-about-your-company-and-your-services-you-can-use-this-space-to-go-into-alittle-more-detail-about-your-company-talk-about-your-team-and-what-services-you-provide-tell-your-visitors-the-story-of-how-you-came-up-with-the-idea-for-your-business-and-what-makes-you-different-from-your-competitors-make-your-company-stand-out-and-show-your-visitors-who-you-are {
+        overflow-wrap: break-word;
+        font-family: 'Average Sans';
+        font-weight: 400;
+        font-size: 15px;
+        color: #585858;
+        padding-left: 70px;
+        width: 600px;
+      }
+      .about .getty-images-9626339861 {
+        background: url('static/images/getty_images_9626339861.png') 50% / cover no-repeat;
+        width: 397px;
+        height: 301px;
+        position: absolute;
+        left:900px;   
+        top: 250px;     
+      }
+      .about .navbar {
+        background: #FFFFFF;
+        margin-bottom: 102px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 0;
+        width: 1440px;
+        box-sizing: border-box;
+      }
+      .about .my-blogs {
+        margin-right: 17.5px;
+        width: 757.5px;
+        overflow-wrap: break-word;
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        font-size: 26px;
+        color: #000000;
+      }
+      .about .group-10 {
+        margin: 7px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 342.6px;
+        height: fit-content;
+        box-sizing: border-box;
+      }
+      .about .home {
+        display: flex;
+        box-sizing: border-box;
+      }
+      .about .home-1 {
+        display: flex;
+        box-sizing: border-box;
+      }
+      .about .home-2 {
+        display: flex;
+        box-sizing: border-box;
+      }
+      .about .home-3 {
+        display: flex;
+        box-sizing: border-box;
+      }
+      .about {
+        background: #FFFFFF;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 71px;
+        width: 1440px;
+        box-sizing: border-box;
+      }
+      .about .frame-8 {
+        background: rgba(252, 222, 217, 0.6);
+        margin-right: 147px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 82px 0 156px 0;
+        width: 971px;
+        box-sizing: border-box;
+      }
+      .about .frame-19 {
+        margin: 82px 181.4px 0 0;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+      }
+      .about .meet-the-facebehind-the-posts {
+        margin-bottom: 25px;
+        display: inline-block;
+        align-self: flex-start;
+        overflow-wrap: break-word;
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        font-size: 40px;
+        text-transform: capitalize;
+        color: #000000;
+        padding-left: 70px;
+      }
+      .about .home-4 {
+        overflow-wrap: break-word;
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #BB5A3A;
+      }
+      .about .home-5 {
+        overflow-wrap: break-word;
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #000000;
+      }
+      .about .home-6 {
+        overflow-wrap: break-word;
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #000000;
+      }
+      .about .home-7 {
+        overflow-wrap: break-word;
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #000000;
+      }
+</style>
+<div class="about">
+    <div class="frame-8">
+      <div class="frame-19">
+        <div class="meet-the-facebehind-the-posts">
+          Meet the face<br />
+          behind the posts
+        </div>
+        <span class="im-aparagraph-click-here-to-add-your-own-text-and-edit-me-its-easy-just-click-edit-text-or-double-click-me-to-add-your-own-content-and-make-changes-to-the-font-feel-free-to-drag-and-drop-me-anywhere-you-like-on-your-page-im-agreat-place-for-you-to-tell-astory-and-let-your-users-know-alittle-more-about-you-this-is-agreat-space-to-write-along-text-about-your-company-and-your-services-you-can-use-this-space-to-go-into-alittle-more-detail-about-your-company-talk-about-your-team-and-what-services-you-provide-tell-your-visitors-the-story-of-how-you-came-up-with-the-idea-for-your-business-and-what-makes-you-different-from-your-competitors-make-your-company-stand-out-and-show-your-visitors-who-you-are">
+          I&#39;m a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.<br />
+          ​<br />
+          This is a great space to write a long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show your visitors who you are.
+        </span>
+      </div>
+    </div>
+    <div class="getty-images-9626339861">
+    </div>
+  </div>
+{% endblock content %}

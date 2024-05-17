@@ -8,7 +8,7 @@ from django.urls import reverse
 class Post(models.Model):
     title = models.CharField(max_length=250)
     slug = models.SlugField(blank=True, null=True)
-    image = models.ImageField(upload_to='images/', blank=True)
+    image = models.ImageField(upload_to='static/images')
     snippet = models.CharField(max_length=250)
     post_date = models.DateField(auto_now_add=True)
     body = RichTextField()

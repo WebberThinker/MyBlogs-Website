@@ -1,7 +1,11 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}{{post.title}}{% endblock title %}
 {% block content %}
     <style>
+      .base .home .home-4 a:hover, .base .home-1 .home-5 a:hover, .base .home-2 .home-6 a:hover, .base .home-3 .home-7 a:hover{
+        color: #BB5A3A;
+      }
       .back{
         border: 1px solid #BB5A3A;
         background: #BB5A3A;
@@ -346,20 +350,16 @@
       </div>
       <div class="group-11">
         <div class="rifacebook-fill">
-          <img class="vector" src="images/vector_6_x2.svg" />
+          <img class="vector" src="static/vectors/vector_6_x2.svg" />
         </div>
         <div class="riinstagram-line">
-          <img class="vector-1" src="../assets/vectors/vector_2_x2.svg" />
+          <img class="vector-1" src="static/vectors/vector_2_x2.svg" />
         </div>
         <div class="mditwitter">
-          <img class="vector-2" src="../assets/vectors/vector_1_x2.svg" />
+          <img class="vector-2" src="static/vectors/vector_1_x2.svg" />
         </div>
         <div class="ripinterest-line">
-          <img class="vector-3" src="../assets/vectors/vector_4_x2.svg" />
+          <img class="vector-3" src="static/vectors/vector_4_x2.svg" />
         </div>
       </div>
-      <div class="recent-posts">
-      Recent Posts
-      </div>
-      {% include "contact.html" %}
 {% endblock content %}
